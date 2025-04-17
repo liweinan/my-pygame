@@ -1,3 +1,6 @@
+
+![88001744893903_ pic](https://github.com/user-attachments/assets/d9c299e1-90aa-439d-abee-840c12288f4d)
+
 # Isometric RPG Game
 
 A simple isometric RPG game built with Pygame featuring smooth character movement and isometric rendering.
