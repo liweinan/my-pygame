@@ -1,4 +1,3 @@
-
 ![88001744893903_ pic](https://github.com/user-attachments/assets/d9c299e1-90aa-439d-abee-840c12288f4d)
 
 ---
@@ -15,20 +14,41 @@
 
 A simple isometric RPG game built with Pygame featuring smooth character movement and isometric rendering.
 
+## Prerequisites
+
+- Python 3.11 (required for compatibility with Pygame 2.5.2)
+- SDL2 and related libraries (for macOS users)
+
 ## Setup
 
-1. Create a virtual environment (recommended):
+1. Install uv if you haven't already:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# On macOS and Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# On Windows
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-2. Install dependencies:
+2. For macOS users, install SDL2 and related libraries:
 ```bash
-pip install -r requirements.txt
+brew install sdl2 sdl2_gfx sdl2_image sdl2_mixer sdl2_ttf pkg-config
 ```
 
-3. Run the game:
+3. Create a virtual environment and install dependencies:
+```bash
+# For bash/zsh users
+uv venv --python 3.11
+source .venv/bin/activate
+uv pip install -r requirements.txt
+
+# For fish shell users
+uv venv --python 3.11
+source .venv/bin/activate.fish
+uv pip install -r requirements.txt
+```
+
+4. Run the game:
 ```bash
 python main.py
 ```
@@ -50,7 +70,7 @@ python main.py
 - Diagonal movement normalization for consistent speed
 
 ## Technical Details
-- Built with Python 3.x and Pygame 2.5.2
+- Built with Python 3.11 and Pygame 2.5.2
 - Uses isometric projection for 2.5D rendering
 - Implements delta-time based movement for smooth gameplay
 - Character movement system with proper direction tracking
